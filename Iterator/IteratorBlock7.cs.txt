@@ -1,0 +1,31 @@
+Executing which line of the Main method will throw an exception in the ReadFromFile method?
+
+            
+          
+void Main()
+{
+	var lines = ReadFromFile(null);		//1 // this line throws an exception
+	
+	foreach (var line in lines)		//2
+	{
+		Console.WriteLine(line);	//3
+	}
+}
+
+public static IEnumerable<string> ReadFromFile(string path)
+{
+	if (path is null)
+	{
+		throw new ArgumentNullException(nameof(path));
+	}
+	
+	return ReadFromFileCore();
+
+	IEnumerable<string> ReadFromFileCore()
+	{
+		foreach (string line in File.ReadLines(path))
+		{
+			yield return line;
+		}
+	}
+}

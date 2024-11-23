@@ -1,0 +1,32 @@
+using System;
+using System.IO;
+using System.Collections;
+using System.Collections.Generic;
+
+public class IteratorBlock
+{
+    public static void Main(string[] args)
+    {
+        var dictionary = new Dictionary<int,string>()
+    	{
+    		[1] = "one",
+    		[2] = "two",
+    		[3] = "three",
+    		[4] = "four",
+    		[5] = "five",
+    	};
+    
+    	var iterator = dictionary.GetEnumerator();
+    
+    	Console.Write($"{iterator.Current}, ");
+    
+    	while (iterator.MoveNext())
+    	{
+    		Console.Write($"{iterator.Current}, ");
+    	}
+    
+    	Console.Write($"{iterator.Current}, ");
+    }
+}
+
+// [0, ], [1, one], [2, two], [3, three], [4, four], [5, five], [0, ], 

@@ -1,0 +1,42 @@
+using System;
+using System.IO;
+using System.Collections;
+using System.Collections.Generic;
+
+public class IteratorBlock
+{
+    static IEnumerable<int> CountWithLimit()
+    {
+    	try
+    	{
+    		for (int i = 1; i <= 5; i++)
+    		{
+    			yield return i;
+    		}
+    	}
+    	finally
+    	{
+    		Console.Write("Stop! ");
+    	}
+    }
+
+
+    
+    public static void Main(string[] args)
+    {
+        IEnumerable<int> iterable = CountWithLimit();
+    	IEnumerator<int> iterator = iterable.GetEnumerator();
+    	iterator.MoveNext();
+    	Console.Write($"{iterator.Current} ");
+    	iterator.MoveNext();
+    	Console.Write($"{iterator.Current} ");
+    
+    	iterator.Dispose();
+    	foreach (int item in CountWithLimit())
+    	{
+    		Console.Write($"{item} ");
+    	}
+    }
+}
+
+// prints 1 2 Stop! 1 2 3 4 5 Stop!

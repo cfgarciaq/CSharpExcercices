@@ -1,0 +1,23 @@
+using System;
+using System.IO;
+using System.Collections;
+using System.Collections.Generic;
+
+public class IteratorBlock
+{
+    public static void Main(string[] args)
+    {
+        var queue = new Queue<int>(new int[] {1, 2, 3, 4, 5});
+
+    	var iterator = queue.GetEnumerator();
+    
+    	Console.Write($"{iterator.Current}, ");
+    
+    	while (iterator.MoveNext())
+    	{
+    		Console.Write($"{iterator.Current}, ");
+    	}
+    
+    	Console.Write($"{iterator.Current}, ");
+    }
+}

@@ -1,0 +1,25 @@
+public static void Main()
+{
+	foreach(var t in CountToTen())
+	{
+		Console.Write($"{t} ");
+	}
+}
+
+public static IEnumerable<int> CountToTen()
+{
+    Console.Write("1 ");
+    yield return 0;
+    Console.Write("2 ");
+    Console.Write("3 ");
+    Console.Write("4 ");
+    yield return 0;
+    Console.Write("5 ");
+    Console.Write("6 ");
+    Console.Write("7 ");
+    yield return 0;
+    Console.Write("8 ");
+    yield return 0;
+    Console.Write("9 ");
+    Console.Write("10 ");
+}

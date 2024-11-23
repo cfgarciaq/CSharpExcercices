@@ -1,0 +1,23 @@
+// what line throws an error ?
+void Main()
+{
+	var lines = ReadFromFile(null);		//1
+	
+	foreach (var line in lines)		//2 this line throws an error
+	{
+		Console.WriteLine(line);	//3
+	}
+}
+
+public static IEnumerable<string> ReadFromFile(string path)
+{
+	if (path is null)
+	{
+		throw new ArgumentNullException(nameof(path));
+	}
+
+	foreach (string line in File.ReadLines(path))
+	{
+		yield return line;
+	}
+}

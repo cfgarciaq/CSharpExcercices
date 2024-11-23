@@ -1,0 +1,17 @@
+class Program
+{
+    static IEnumerable<string> Get()
+    {
+        yield return "Hello ";
+        Console.Write("Hello ");
+        yield return "World ";
+    }
+    static void Main(string[] args)
+    {
+        foreach (string s in Get())
+		{
+			Console.Write(s);
+			Console.Write("C# ");
+		}
+	}
+}
