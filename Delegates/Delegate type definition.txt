@@ -1,0 +1,18 @@
+D&L3 - Delegate Type Definition
+5/5 points
+Choose all right statements. Then, click "Submit".
+
+Choose all delegate definitions that are correct.
+
+
+public delegate void Calculation(int x, int y, out int result); //Correct
+delegate int SomeOperation(int x, int y) {}
+delegate static int NamedCalculation(int x, int y, string name);
+delegate int Operation(int x, int y); //Correct
+delegate int NamedOperation(int x, int y, string name); //Correct
+public class Converter
+{
+	public delegate string Convert(int x);
+} //Correct
+public delegate bool IsMatch<T>(T obj); //Correct
+internal delegate TResult Transform<TSource, TResult>(TSource obj); //Correct

@@ -1,0 +1,27 @@
+D&L2 – Delegate Type
+3/3 points
+Choose all right statements. Then, click "Submit".
+
+Choose the correct statements regarding Delegates.
+
+
+// Correct
+Delegate is a type which object encapsulates information about method or methods with a particular parameter list and return type.
+
+// Incorrect
+Delegate is a value type.
+
+// Correct
+Delegates can be invoked like a method by using the delegate variable name followed by any parameters in parentheses.
+
+// Correct
+Delegates allow methods to be passed as parameters.
+
+// Correct
+Any method from any accessible class or struct that matches the delegate type can be assigned to the delegate.
+
+// Incorrect
+Delegate is mutable type. 
+
+// Incorrect
+A delegate can be a field or property in a class, but not in struct.

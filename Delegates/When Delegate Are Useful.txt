@@ -1,0 +1,9 @@
+When Delegates Are Useful
+1/1 point
+Read the question below and select the correct answer. Then, click "Submit".
+
+Choose all scenarios when delegates can be useful.
+A delegate is used when, at design time, you do not know which method you need to call, and the information to determine this is available only at runtime.
+A delegate is used when the code calling a method is being developed independently of the code that will supply the method to be called.
+A delegate is used when multicast operations are needed in code.
+All of the above. /// correct
